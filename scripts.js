@@ -11,4 +11,15 @@ form.addEventListener("submit", (event) => {
     result.textContent = 'Division not performed. Both values are required in inputs. Try again'
    }
 
+   if(divider === 0 ){
+    result.textContent = 'Division not performed. Invalid number provided. Try again'
+    
+    }try{
+      throw new Error('Division not performed. Invalid number provided. Try again')
+    }
+    catch(error){
+      console.error('Error:', error.message)
+    }
+   
+
 });
